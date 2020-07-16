@@ -1,0 +1,99 @@
+@use 'fonts';
+$prussian-blue:rgb(8, 58, 91);
+$maastricht-blue:rgb(6, 30, 62);
+$celadon-blue: rgb(13, 129, 166);
+$blue-green: rgb(14, 152, 190);
+$white:rgb(255,255,255);
+
+$azure:#01c5ce;
+$light-blue:aliceblue;
+$peach:#fee2d6;
+$pink:#d297b1;
+
+$heading: 'Asul', 'Bookman', sans-serif;
+$openSans: 'Open Sans','Roboto',  sans-serif;
+
+@use 'heading';
+@use 'table';
+@use 'buttons';
+
+body{
+    font-family: $openSans;
+    font-size: 16px;
+    margin: 0 0.25rem;
+    background-color: $light-blue;
+    text-align: center;
+}
+
+.alerts,
+.hint{
+    color:$celadon-blue;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+   #wrongInput,
+   #alreadyThere{
+    display: none;
+    padding-bottom: 1rem;
+    }  
+}
+.alerts{
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+.hint{
+    display: none;
+    margin-bottom: 0px;
+    padding-bottom: 1rem;
+}
+h3{
+text-transform: uppercase;
+font-family: $heading;
+color: $celadon-blue;
+margin-top: 0;
+}
+
+.canvas{
+    background-color: $light-blue;
+    canvas{
+    display: block;
+    margin: 0 auto 1rem;
+    border-radius: 1.5rem;
+}
+}
+
+.rules{
+    display: none;
+    text-align: justify;
+    margin: 1.5rem auto 2rem;
+    background-color: white;
+    border-radius: 2rem;
+    h3{
+        text-align: center;
+        padding-top: 1rem;
+    }
+ol{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+li{
+    color:$celadon-blue;
+    font-weight: 600;
+}
+}
+
+@media (min-width: 600px) {
+  .rules{
+      width: 50%;
+  }
+}
+@media (min-height: 1000px){
+    
+    #rules{
+        display: none;
+    }
+    .rules{
+        display: block;
+    }
+}

@@ -1,0 +1,107 @@
+$prussian-blue:rgb(8, 58, 91);
+$celadon-blue: rgb(13, 129, 166);
+$white:rgb(255,255,255);
+
+$heading: 'Asul', 'Bookman', sans-serif;
+$openSans: 'Open Sans','Roboto',  sans-serif;
+
+table{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 100%;
+    padding-top: 1.5rem;
+    text-transform: uppercase;
+    color: $celadon-blue;
+    font-weight: bold;
+    font-family: $openSans;
+    p{
+        display: inline;
+    }
+    .left{
+        text-align: end;
+    }
+    .input{
+        text-align: start;
+        padding-left: 2rem;
+    }
+    .last{
+        text-align: center;
+        td{
+            padding-top: 1rem;
+        }
+    }
+
+}
+table:target{
+    margin-top: -1rem;
+}
+
+#wordPattern{
+    text-align: center;
+    padding: 1rem 0;
+    background-color: $white;
+    border-radius: 5rem;
+    margin: 0 auto 1.5rem;
+    height: 89.406;
+ span{
+    display: inline-block;
+    background-color:$celadon-blue;
+    color:$white;
+    font-weight: bold;
+    font-family: $heading;
+    width:2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+}
+
+@media (max-height:700px){
+    table{
+        margin-top: -1rem;
+    }
+}
+@media (min-width: 600px) {
+    table{
+        .guesses{
+            text-align: start;
+            padding-left: 2rem;
+        }
+    }
+  #wordPattern{
+      width: 70%;
+      span{
+          margin-right: 1rem;
+      }
+    }
+}
+@media (min-width:700){
+    table{
+        width: 50%;
+    }
+}
+@media (min-width: 800px) {
+   #wordPattern{
+      width: 60%;
+   }
+    
+}
+@media (min-height: 800px) {
+   #wordPattern{
+     margin-top: -2rem;
+   }
+    
+}
+
+@media (min-height: 1000px){
+    table{
+        margin-top: 1rem;
+    margin-bottom: 3rem;
+    }
+    #wordPattern{
+        margin-bottom: 3rem;
+    }
+}

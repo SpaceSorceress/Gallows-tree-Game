@@ -1,0 +1,47 @@
+
+
+$prussian-blue:rgb(8, 58, 91);
+$white:rgb(255,255,255);
+
+$heading: 'Asul', 'Bookman', sans-serif;
+$openSans: 'Open Sans','Roboto',  sans-serif;
+
+h1{
+    font-family: $heading;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color:$prussian-blue;
+    color: white;
+    margin: 0 -1rem;
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+footer{
+    font-family: $openSans;
+    font-weight: bold;
+    background-color:$prussian-blue;
+    color: white;
+    margin: 0 -1rem;
+    text-align: center;
+    height: 5rem;
+    .links{
+        padding-top: 1rem;
+    }
+    i{
+        color:white;
+        font-size:1.5rem;
+    }
+    .fa-github{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    h4{
+        font-family: $heading;
+        margin-bottom: 0;
+            font-size: 0.75rem;
+    color:$white;
+    
+    }
+}

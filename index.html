@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallows-tree Game</title>
+    <link href="./styles/output.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://kit.fontawesome.com/9aeff7a208.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>GALLOWS-TREE</h1>
+    <table id="table">
+        <tr class="playing">
+            <td class="left">Correct guesses:</td>
+            <td class="guesses"><p id="correct"></p></td>
+        </tr>
+        <tr class="playing">
+            <td class="left">Wrong guesses:</td>
+            <td class="guesses"><p id="wrong"></p></td>
+        </tr>
+        <tr class="playing">
+            <form onsubmit="return false;" id="inputForm">
+                <td class="left"><label for="inputLetter">Make a guess:</label>
+                </td>
+                <td class="input"><input type="text" id="inputLetter" name="inputLetter" pattern="[A-Za-z]{1}"
+                        title="You have to enter one latin letter per guess" minlength="1" maxlength="1" required >
+                   </td>
+            </form>
+        </tr>
+        <tr class="last">
+                    <td colspan="2"><input type="submit" value="Try!" id="submitButton" class="button playing"></td> 
+        </tr>
+    </table>
+    <section class='alerts'>
+            <p id="wrongInput">Please enter 1 latin letter to make a guess.</p>
+            <p id="alreadyThere">You have tried this letter already.</p>
+    </section>
+    
+
+    <section id="wordPattern">
+        <h3>Word is:</h3>
+        <div>
+            <span>W</span>
+            <span>E</span>
+            <span>L</span>
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>E</span>
+        </div>
+    </section>
+
+    <section class="canvas">
+    <canvas width="300" height="335">
+    </canvas>
+    </section>
+
+    <p class='hint'>This is an animal! =)</p>
+    <section id="buttons">
+        <button id="newGame">New Game</button>
+        <button id="hint" class="playing">Hint</button>
+        <button id="rules">How to play</button>
+    </section>
+
+    <section class="rules">
+        <h3>Gallows-tree game</h3>
+        <ol>
+            <li>Guess letters to fill in the blanks before your little man gets hung out to dry.</li>
+            <li>When you press "New Game", the computer choses a random word and indicates the number of letters in this word by drawing empty circles below "Word is..".</li>
+            <li>Next step is to try to guess a letter. If you suggest a letter that occurs in the word, the computer fills in the blanks with that letter in
+            the right places.</li>
+            <li>If the word does not contain the suggested letter, the computer draws one element of a hangman’s gallows.</li>
+            <li>As the game progresses, a segment of the gallows and of a victim is added for every suggested letter not in the word.</li>
+            <li>The game ends either when the picture of the gallows and victim is fully drawn, or when you discover all letters in the hidden word. </li>
+            <li>If stuck, get a hint. Good luck!</li>
+        </ol>
+    </section>
+    
+    <footer>
+        <div class="links">
+            <a href="https://www.facebook.com/profile.php?id=100007659275644"
+            title="Visit this game creator's facebook"
+            target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://github.com/SpaceSorceress/"
+            title="Check-out author's github"
+            target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/iuliia-siriakivska/"
+            title="Iuliia's Linkedin page"
+            target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <h4>Copyright &copy; Iuliia Siriakivska 2020</h3>
+    </footer>
+    
+</body>
+
+
+    <script src="./scripts/canvasActions.js"></script>
+    <script src="./scripts/words.js"></script>
+    <script src="./scripts/main.js"></script>
+</html>
