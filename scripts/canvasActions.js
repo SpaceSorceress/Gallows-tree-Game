@@ -46,8 +46,9 @@ function clearCanvas() {
 }
 
 function writeEngagement() {
+  clearCanvas();
   ctx.font = "bold 25px Asul";
-  ctx.fillText("MAKE A GUESS", 50, 150);
+  ctx.fillText("MAKE A GUESS", 55, 150);
   ctx.font = "15px Asul";
   ctx.fillText("(using a field above)", 85, 180);
 }

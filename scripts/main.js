@@ -35,7 +35,9 @@ function clearTemplate() {
 function createNewTeamplate(randomWord) {
   let numOfSquares = randomWord.length;
   for (let i = 0; i < numOfSquares; i++) {
-    template.appendChild(document.createElement("span"));
+    let span = document.createElement("span");
+    span.innerHTML="&nbsp;"
+    template.appendChild(span);
   }
 }
 
